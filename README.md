@@ -6,18 +6,18 @@ A streamlined authentication solution using Google OAuth 2.0 in a Nuxt 3 applica
 
 ```mermaid
 flowchart TD
-    A[User] -->|1. Visit| B[Login Page]
-    B -->|2. Click Sign In| C[Google OAuth]
-    C -->|3. Authorize| D[Google Services]
-    D -->|4. Return Code| E[/api/auth/google/token]
-    E -->|5. Exchange Code| F[Google Token API]
-    F -->|6. Return Tokens| E
-    E -->|7. Verify User| G[Create JWT]
-    G -->|8. Return JWT + User Info| B
-    B -->|9. Store Token| H[Auth Module]
-    A -->|10. Access| I[Dashboard]
-    I -->|11. Verify Token| J[Auth Middleware]
-    J -->|12. Allow Access| I
+    A[User] -->|1.Visit| B[Login Page]
+    B -->|2.Click Sign In| C[Google OAuth]
+    C -->|3.Authorize| D[Google Services]
+    D -->|4.Return Code| E[/api/auth/google/token]
+    E -->|5.Exchange Code| F[Google Token API]
+    F -->|6.Return Tokens| E
+    E -->|7.Verify User| G[Create JWT]
+    G -->|8.Return JWT + User Info| B
+    B -->|9.Store Token| H[Auth Module]
+    A -->|10.Access| I[Dashboard]
+    I -->|11.Verify Token| J[Auth Middleware]
+    J -->|12.Allow Access| I
 ```
 
 ## Authentication Flow
