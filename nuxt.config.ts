@@ -23,7 +23,7 @@ export default defineNuxtConfig({
         },
         responseType: 'code',
         grantType: 'authorization_code',
-        clientId: 'YOUR_CLIENT_ID', // Replace with your Google client ID
+        clientId: process.env.GOOGLE_CLIENT_ID || 'YOUR_CLIENT_ID', // Will use env variable if available
         scope: ['openid', 'profile', 'email'],
         codeChallengeMethod: '',
         user: {
