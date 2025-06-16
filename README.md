@@ -9,7 +9,7 @@ flowchart TD
     A[User] -->|1.Visit| B[Login Page]
     B -->|2.Click Sign In| C[Google OAuth]
     C -->|3.Authorize| D[Google Services]
-    D -->|4.Return Code| E[/api/auth/google/token]
+    D -->|4.Return Code| E["/api/auth/google/token"]
     E -->|5.Exchange Code| F[Google Token API]
     F -->|6.Return Tokens| E
     E -->|7.Verify User| G[Create JWT]
